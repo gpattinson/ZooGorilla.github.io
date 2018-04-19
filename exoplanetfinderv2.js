@@ -34,12 +34,12 @@
         $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,rowupdate&order=dec&format=json&callback=foo", function(resp) {
                 var resp2 = resp.features,
 				tableData = [];
-			for (var i = 0, len = [0]resp2.length; i < len; i++) {
+			for (var i = 0, len = resp2.length; i < len; i++) {
                 tableData.push({
-                    "pl_name": [0]resp2[i].pl_name,
-                    "pl_masse": [0]resp2[i].properties.pl_masse,
-                    "pl_rade": [0]resp2[i].properties.pl_rade,
-                    "rowupdate": [0]resp2[i].rowupdate
+                    "pl_name": resp2[i].pl_name,
+                    "pl_masse": resp2[i].properties.pl_masse,
+                    "pl_rade": resp2[i].properties.pl_rade,
+                    "rowupdate": resp2[i].rowupdate
                 });
 			}	
 
