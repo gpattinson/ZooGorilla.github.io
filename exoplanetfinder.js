@@ -37,6 +37,7 @@
 
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
+				if(typeof feat.length == 'undefined') return;
                 tableData.push({
                     "id": feat[i].id,
                     "mag": feat[i].properties.mag,
