@@ -9,11 +9,11 @@
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "pl_masse",
-            alias: "magnitude",
+            alias: "Mass_Earth",
             dataType: tableau.dataTypeEnum.float
         }, {
 			id: "pl_rade",
-            alias: "magnitude",
+            alias: "Radius_Earth",
             dataType: tableau.dataTypeEnum.float
         }, {
             id: "rowupdate",
@@ -38,10 +38,10 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "id": feat[i].id,
-                    "mag": feat[i].properties.mag,
-                    "title": feat[i].properties.title,
-                    "location": feat[i].geometry
+                    "pl_name": feat[i].pl_name,
+                    "pl_masse": feat[i].properties.pl_masse,
+                    "pl_rade": feat[i].properties.pl_rade,
+                    "rowupdate": feat[i].rowupdate
                 });
             }
 
