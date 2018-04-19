@@ -35,10 +35,10 @@
                 tableData = [];
 			for (var i = 0, len = resp.length; i < len; i++) {
                 tableData.push({
-                    "pl_name": feat[i].pl_name,
-                    "pl_masse": feat[i].properties.pl_masse,
-                    "pl_rade": feat[i].properties.pl_rade,
-                    "rowupdate": feat[i].rowupdate
+                    "pl_name": resp[i].pl_name,
+                    "pl_masse": resp[i].properties.pl_masse,
+                    "pl_rade": resp[i].properties.pl_rade,
+                    "rowupdate": resp[i].rowupdate
                 });
 			}	
 
