@@ -31,8 +31,9 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,rowupdate&order=dec&format=json&callback=foo", function(resp) {
-                var resp2 = resp.features,
+        $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,rowupdate&order=dec&format=json", function(resp) {
+                
+				var resp2=JSON.parse(resp),
 				tableData = [];
 			for (var i = 0, len = resp2.length; i < len; i++) {
                 tableData.push({
