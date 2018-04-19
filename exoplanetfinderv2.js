@@ -35,15 +35,13 @@
             var feat = resp.features,
                 tableData = [];
 
-            // Iterate over the JSON object
-            for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "pl_name": feat[i].pl_name,
-                    "pl_masse": feat[i].properties.pl_masse,
-                    "pl_rade": feat[i].properties.pl_rade,
-                    "rowupdate": feat[i].rowupdate
+                    "pl_name": feat[1].pl_name,
+                    "pl_masse": feat[1].properties.pl_masse,
+                    "pl_rade": feat[1].properties.pl_rade,
+                    "rowupdate": feat[1].rowupdate
                 });
-            }
+
 
             table.appendRows(tableData);
             doneCallback();
