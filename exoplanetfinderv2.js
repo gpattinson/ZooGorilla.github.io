@@ -35,7 +35,7 @@
                 
 				var resp2=JSON.parse(JSON.stringify(resp)),
 				tableData = [];
-			for (var i = 0,i < resp2.lenth; i++) {
+			for (var i = 0, len = resp2.length; i < len; i++) {
                 tableData.push({
                     "pl_name": resp2[i].properties.pl_name,
                     "pl_masse": resp2[i].properties.pl_masse,
