@@ -42,7 +42,13 @@
                     "pl_rade": resp2[i].pl_rade,
                     "rowupdate": resp2[i].rowupdate
                 });
-			}	
+			}
+			tableData.push({
+				"pl_name": "Earth",
+				"pl_masse": 1,
+				"pl_rade": 1,
+			"rowupdate": '1/1/1900'});
+			
 
             table.appendRows(tableData);
             doneCallback();
