@@ -49,7 +49,7 @@
 				"pl_rade": 1,
 			"rowupdate": '1/1/1900'});
 			
-			var url = "mass_radius_planet.xlsx";
+			var url = "http://zoogorilla.github.io/mass_radius_planet.xlsx";
 
 			/* set up async GET request */
 			var req = new XMLHttpRequest();
