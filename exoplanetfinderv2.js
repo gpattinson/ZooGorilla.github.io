@@ -69,6 +69,7 @@
 						"pl_radde": worksheet2[j].pl_rade,
 						"rowupdate": worksheet2[j].rowupdate
 					});
+				}
   
 }
 
