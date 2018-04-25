@@ -61,7 +61,14 @@
 				var workbook = XLSX.read(data, {type:"array"});
 				var first_sheet_name = workbook.SheetNames[0];
 				var worksheet = workbook.Sheets[first_sheet_name];
-				console.log(XLSX.utils.sheet_to_json(worksheet));
+				var worksheet2=XLSX.utils.sheet_to_json(worksheet);
+				for var( j=0, len=worksheet2.length,j<len; i++) {
+					tableData.push({
+						"pl_name": worksheet2[j].pl_name,
+						"pl_masse": worksheet2[j].pl_masse,
+						"pl_radde": worksheet2[j].pl_rade,
+						"rowupdate": worksheet2[j].rowupdate
+					});
   
 }
 
