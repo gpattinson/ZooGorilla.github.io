@@ -48,6 +48,7 @@
 				"pl_masse": 1,
 				"pl_rade": 1,
 			"rowupdate": '1/1/1900'});
+		
 			
 			var url = "http://zoogorilla.github.io/mass_radius_planet.xlsx";
 
@@ -56,28 +57,26 @@
 			req.open("GET", url, true);
 			req.responseType = "arraybuffer";
 
-			req.onload = function(e) {
-				var data = new Uint8Array(req.response);
-				var workbook = XLSX.read(data, {type:"array"});
-				var first_sheet_name = workbook.SheetNames[0];
-				var worksheet = workbook.Sheets[first_sheet_name];
-				var worksheet2=XLSX.utils.sheet_to_json(worksheet);
-				var worksheet3=JSON.parse(JSON.stringify(worksheet2));
+			var data = new Uint8Array(req.response);
+			var workbook = XLSX.read(data, {type:"array"});
+			var first_sheet_name = workbook.SheetNames[0];
+			var worksheet = workbook.Sheets[first_sheet_name];
+			var worksheet2=XLSX.utils.sheet_to_json(worksheet);
+			var worksheet3=JSON.parse(JSON.stringify(worksheet2));
 				
-  
-}
-
-			req.send()
 			for(var j=0, len2=worksheet3.length; j < len2; j++) {
-					tableData.push({
-						"pl_name": worksheet3[j].pl_name,
-						"pl_masse": worksheet3[j].pl_masse,
-						"pl_radde": worksheet3[j].pl_rade,
-						"rowupdate": worksheet3[j].rowupdate
-					});
+				tableData.push({
+					"pl_name": worksheet3[j].pl_name,
+					"pl_masse": worksheet3[j].pl_masse,
+					"pl_radde": worksheet3[j].pl_rade,
+					"rowupdate": worksheet3[j].rowupdate
+				});
 				}
+			
+		
+		
 
-
+			
             table.appendRows(tableData);
 			
 			
