@@ -59,7 +59,9 @@
 			req.onload = function(e) {
 				var data = new Uint8Array(req.response);
 				var workbook = XLSX.read(data, {type:"array"});
-
+				var first_sheet_name = workbook.SheetNames[0];
+				var worksheet = workbook.Sheets[first_sheet_name];
+				console.log(XLSX.utils.sheet_to_json(worksheet));
   
 }
 
