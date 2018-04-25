@@ -73,7 +73,7 @@
 	var workbook = XLSX.read(bstr, {type: "binary"});
 	/* DO SOMETHING WITH workbook HERE */
 	var firstSheet = workbook.SheetNames[0];
-	document.write(JSON.stringify(firstSheet));
+	console.log(workbook);
 				}
 	oReq.send();
 
