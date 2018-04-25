@@ -73,9 +73,10 @@
 	var workbook = XLSX.read(bstr, {type: "binary"});
 	/* DO SOMETHING WITH workbook HERE */
 	var firstSheet = workbook.SheetNames[0];
-	console.log(workbook);
+	
 				}
 	oReq.send();
+	console.log(workbook);
 
     tableau.registerConnector(myConnector);
 
