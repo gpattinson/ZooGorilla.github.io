@@ -62,7 +62,7 @@
 				var first_sheet_name = workbook.SheetNames[0];
 				var worksheet = workbook.Sheets[first_sheet_name];
 				var worksheet2=XLSX.utils.sheet_to_json(worksheet);
-				for var( j=0, len=worksheet2.length,j<len; i++) {
+				for(var j=0, len2=worksheet2.length,j<len2; j++) {
 					tableData.push({
 						"pl_name": worksheet2[j].pl_name,
 						"pl_masse": worksheet2[j].pl_masse,
