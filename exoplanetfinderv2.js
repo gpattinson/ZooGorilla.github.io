@@ -49,40 +49,31 @@
 				"pl_rade": 1,
 			"rowupdate": '1/1/1900'});
 		
-			
-			var url = "http://zoogorilla.github.io/mass_radius_planet.xlsx";
-
-			/* set up async GET request */
-			var req = new XMLHttpRequest();
-			req.open("GET", url, true);
-			req.responseType = "arraybuffer";
-
-			var data = new Uint8Array(req.response);
-			var workbook = XLSX.read(data, {type:"array"});
-			var first_sheet_name = workbook.SheetNames[0];
-			var worksheet = workbook.Sheets[first_sheet_name];
-			var worksheet2=XLSX.utils.sheet_to_json(worksheet);
-			var worksheet3=JSON.parse(JSON.stringify(worksheet2));
-				
-			for(var j=0, len2=worksheet3.length; j < len2; j++) {
-				tableData.push({
-					"pl_name": worksheet3[j].pl_name,
-					"pl_masse": worksheet3[j].pl_masse,
-					"pl_radde": worksheet3[j].pl_rade,
-					"rowupdate": worksheet3[j].rowupdate
-				});
-				}
-			
-		
-		
-
-			
+	
             table.appendRows(tableData);
 			
 			
             doneCallback();
         });
     };
+	
+	const url = "http://zoogorilla.github.io/mass_radius_planet.xlsx";
+
+	/* set up async GET request */
+	var oReq = new XMLHttpRequest();
+	oReq.open("GET", url,true);
+	oReq.responseType="arraybuffer";
+	oReq.onload = function(e) {
+	var arraybuffer = oReq.response; // not responseText
+	for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+	var bstr = arr.join("");
+	/* Call XLSX */
+	var workbook = XLSX.read(bstr, {type: "binary"});
+	/* DO SOMETHING WITH workbook HERE */
+	var firstSheet = workbook.SheetNames[0];
+	document.write(JSON.stringify(firstSheet));
+				}
+	oReq.send();
 
     tableau.registerConnector(myConnector);
 
