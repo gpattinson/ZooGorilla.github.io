@@ -62,16 +62,21 @@
 				var first_sheet_name = workbook.SheetNames[0];
 				var worksheet = workbook.Sheets[first_sheet_name];
 				var worksheet2=XLSX.utils.sheet_to_json(worksheet);
-				for(var j=0, len2=worksheet2.length; j < len2; j++) {
+				var worksheet3=JSON.parse(JSON.stringify(worksheet2))
+				for(var j=0, len2=worksheet3.length; j < len2; j++) {
 					tableData.push({
-						"pl_name": worksheet2[j].pl_name,
-						"pl_masse": worksheet2[j].pl_masse,
-						"pl_radde": worksheet2[j].pl_rade,
-						"rowupdate": worksheet2[j].rowupdate
+						"pl_name": worksheet3[j].pl_name,
+						"pl_masse": worksheet3[j].pl_masse,
+						"pl_radde": worksheet3[j].pl_rade,
+						"rowupdate": worksheet3[j].rowupdate
 					});
 				}
+			
+				
   
 }
+
+			req.send()
 
 
             table.appendRows(tableData);
