@@ -49,6 +49,16 @@
 				"pl_rade": 1,
 			"rowupdate": '1/1/1900'});
 			
+
+		
+	
+            table.appendRows(tableData);
+			
+			
+            doneCallback();
+        });
+    };
+	
 			const url = "https://zoogorilla.github.io/mass_radius_planet.xlsx";
 
 			/* set up async GET request */
@@ -69,16 +79,6 @@
 				}
 			oReq.send();
 			console.log(workbook);
-		
-	
-            table.appendRows(tableData);
-			
-			
-            doneCallback();
-        });
-    };
-	
-
     tableau.registerConnector(myConnector);
 
     // Create event listeners for when the user submits the form
