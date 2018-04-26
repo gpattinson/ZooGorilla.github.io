@@ -54,7 +54,7 @@
 	
 	};	
 	
-	console.log(workbook);
+	console.log(table);
 	
     // Download the data
     myConnector.getData = function(table, doneCallback) {
