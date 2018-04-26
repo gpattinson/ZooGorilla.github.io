@@ -108,7 +108,7 @@
 			tableData.push({
 				"pl_name": "M15_Model",
 				"pl_masse": 15,
-				"pl_rade": 1.9,
+				"pl_rade": 2.0,
 				"pl_discmethod": "NA",
 				"pl_dens": 5.51,
 				"pl_imgflag": "NA",
