@@ -62,6 +62,8 @@
         });
     };
 	
+	myConnector.getData=function(table,doneCallback) {
+		
 	const url = "https://zoogorilla.github.io/mass_radius_planet.xlsx";
 
 	/* set up async GET request */
@@ -82,6 +84,8 @@
 		}
 	oReq.send();
 	
+	doneCallback();
+	}
 
     tableau.registerConnector(myConnector);
 
