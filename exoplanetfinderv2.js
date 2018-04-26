@@ -29,7 +29,29 @@
         schemaCallback([tableSchema]);
     };
 	
+	myConnector.getData=function(table) {
 		
+	const url = "https://zoogorilla.github.io/mass_radius_planet.xlsx";
+
+	/* set up async GET request */
+	var oReq = new XMLHttpRequest();
+	oReq.open("GET", url,true);
+	oReq.responseType="arraybuffer";
+	oReq.onload = function(e) {
+	var arraybuffer = oReq.response; // not responseText
+	var data = new Uint8Array(arraybuffer);
+	var arr = new Array();
+	for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+	var bstr = arr.join("");
+	/* Call XLSX */
+	var workbook = XLSX.read(bstr, {type: "binary"});
+	/* DO SOMETHING WITH workbook HERE */
+	var firstSheet = workbook.SheetNames[0];
+	console.log(workbook);
+		}
+	oReq.send();
+	
+	};	
 	
 
     // Download the data
@@ -62,30 +84,7 @@
         });
     };
 	
-	myConnector.getData=function(table,doneCallback) {
-		
-	const url = "https://zoogorilla.github.io/mass_radius_planet.xlsx";
 
-	/* set up async GET request */
-	var oReq = new XMLHttpRequest();
-	oReq.open("GET", url,true);
-	oReq.responseType="arraybuffer";
-	oReq.onload = function(e) {
-	var arraybuffer = oReq.response; // not responseText
-	var data = new Uint8Array(arraybuffer);
-	var arr = new Array();
-	for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
-	var bstr = arr.join("");
-	/* Call XLSX */
-	var workbook = XLSX.read(bstr, {type: "binary"});
-	/* DO SOMETHING WITH workbook HERE */
-	var firstSheet = workbook.SheetNames[0];
-	console.log(workbook);
-		}
-	oReq.send();
-	
-	doneCallback();
-	}
 
     tableau.registerConnector(myConnector);
 
