@@ -16,6 +16,34 @@
             alias: "Radius_Earth",
             dataType: tableau.dataTypeEnum.float
         }, {
+			id: "pl_discmethod",
+            alias: "Discovery_Method",
+            dataType: tableau.dataTypeEnum.string
+        },{
+			id: "pl_density",
+            alias: "Density",
+            dataType: tableau.dataTypeEnum.float
+        },{
+			id: "pl_imgflag",
+            alias: "Has_Image",
+            dataType: tableau.dataTypeEnum.string
+        },{
+			id: "pl_eqt",
+            alias: "Equilibrium_Temp",
+            dataType: tableau.dataTypeEnum.float
+        },{
+			id: "pl_disc",
+            alias: "Year_Discovered",
+            dataType: tableau.dataTypeEnum.float
+        },{
+			id: "pl_pelink",
+            alias: "Link_pe",
+            dataType: tableau.dataTypeEnum.string
+        },{
+			id: "pl_edelink",
+            alias: "Link_ede",
+            dataType: tableau.dataTypeEnum.string
+        },{
             id: "rowupdate",
             dataType: tableau.dataTypeEnum.date
         }];
@@ -41,14 +69,69 @@
                     "pl_name": resp2[i].pl_name,
                     "pl_masse": resp2[i].pl_masse,
                     "pl_rade": resp2[i].pl_rade,
+					"pl_discmethod":resp2[i].pl_discmethod,
+					"pl_density":resp2[i].pl_density,
+					"pl_imgflag":resp2[i].pl_imgflag,
+					"pl_disc":resp2[i].pl_disc,
+					"pl_pelink":resp2[i].pl_pelink,
+					"pl_edelink":resp2[i].pl_edelink,
                     "rowupdate": resp2[i].rowupdate
                 });
 			}
+			
 			tableData.push({
 				"pl_name": "Earth",
 				"pl_masse": 1,
 				"pl_rade": 1,
+				"pl_discmethod":,
+				"pl_density": 5.51,
+				"pl_imgflag":,
+				"pl_eqt": 255,
+				"pl_disc":,
+				"pl_pelink":,
+				"pl_edelink":,
 			"rowupdate": '1/1/1900'});
+			
+			tableData.push({
+				"pl_name": "M8_Model",
+				"pl_masse": 8,
+				"pl_rade": 1.7,
+				"pl_discmethod":,
+				"pl_density":,
+				"pl_imgflag":,
+				"pl_eqt":,
+				"pl_disc":,
+				"pl_pelink":,
+				"pl_edelink":,
+			"rowupdate": '1/1/1900'});
+			
+			tableData.push({
+				"pl_name": "M15_Model",
+				"pl_masse": 15,
+				"pl_rade": 1.9,
+				"pl_discmethod":,
+				"pl_density":,
+				"pl_imgflag":,
+				"pl_eqt":,
+				"pl_disc":,
+				"pl_pelink":,
+				"pl_edelink":,
+			"rowupdate": '1/1/1900'});
+			
+			tableData.push({
+				"pl_name": "Mass-Radius-Curve",
+				"pl_masse":,
+				"pl_rade":,
+				"pl_discmethod":,
+				"pl_density":,
+				"pl_imgflag":,
+				"pl_eqt":,
+				"pl_disc":,
+				"pl_pelink":,
+				"pl_edelink":,
+			"rowupdate": '1/1/1900'});
+				
+				
 			
 
 		
