@@ -50,11 +50,12 @@
 
 		}
 	oReq.send();
-	console.log(workbook);
+
 	
 	};	
 	
-
+	console.log(workbook);
+	
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,rowupdate&order=dec&format=json", function(resp) {
