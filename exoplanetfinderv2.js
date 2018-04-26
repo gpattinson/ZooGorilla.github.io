@@ -20,7 +20,7 @@
             alias: "Discovery_Method",
             dataType: tableau.dataTypeEnum.string
         },{
-			id: "pl_density",
+			id: "pl_dens",
             alias: "Density",
             dataType: tableau.dataTypeEnum.float
         },{
@@ -60,7 +60,7 @@
 	
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,pl_discmethod,pl_density,pl_imgflag,pl_eqt,pl_disc,pl_pelink,pl_edelink,rowupdate&order=dec&format=json", function(resp) {
+        $.getJSON("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_masse,pl_rade,pl_discmethod,pl_dens,pl_imgflag,pl_eqt,pl_disc,pl_pelink,pl_edelink,rowupdate&order=dec&format=json", function(resp) {
                 
 			var resp2=JSON.parse(JSON.stringify(resp)),
 				tableData = [];
@@ -70,7 +70,7 @@
                     "pl_masse": resp2[i].pl_masse,
                     "pl_rade": resp2[i].pl_rade,
 					"pl_discmethod":resp2[i].pl_discmethod,
-					"pl_density":resp2[i].pl_density,
+					"pl_dens":resp2[i].pl_dens,
 					"pl_imgflag":resp2[i].pl_imgflag,
 					"pl_disc":resp2[i].pl_disc,
 					"pl_pelink":resp2[i].pl_pelink,
@@ -84,7 +84,7 @@
 				"pl_masse": 1,
 				"pl_rade": 1,
 				"pl_discmethod": "NA",
-				"pl_density": 5.51,
+				"pl_dens": 5.51,
 				"pl_imgflag": "NA",
 				"pl_eqt": 255,
 				"pl_disc": 1900,
@@ -97,7 +97,7 @@
 				"pl_masse": 8,
 				"pl_rade": 1.7,
 				"pl_discmethod": "NA",
-				"pl_density": 5.51,
+				"pl_dens": 5.51,
 				"pl_imgflag": "NA",
 				"pl_eqt": 255,
 				"pl_disc": 1900,
@@ -110,7 +110,7 @@
 				"pl_masse": 15,
 				"pl_rade": 1.9,
 				"pl_discmethod": "NA",
-				"pl_density": 5.51,
+				"pl_dens": 5.51,
 				"pl_imgflag": "NA",
 				"pl_eqt": 255,
 				"pl_disc": 1900,
@@ -123,7 +123,7 @@
 				"pl_masse": 1,
 				"pl_rade": 1,
 				"pl_discmethod": "NA",
-				"pl_density": 5.51,
+				"pl_dens": 5.51,
 				"pl_imgflag": "NA",
 				"pl_eqt": 255,
 				"pl_disc": 1900,
