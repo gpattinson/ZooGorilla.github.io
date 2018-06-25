@@ -119,7 +119,34 @@
 			"rowupdate": '1/1/1900'});
 			
 			tableData.push({
-				"pl_name": "Mass-Radius-Curve",
+				"pl_name": "Planet Radius(Xc 0.315, Xice 0.0)",
+				"pl_masse": 1,
+				"pl_rade": 1,
+				"pl_discmethod": "NA",
+				"pl_dens": 5.51,
+				"pl_imgflag": "NA",
+				"pl_eqt": 255,
+				"pl_disc": 1900,
+				"pl_pelink": "NA",
+				"pl_edelink": "NA",
+			"rowupdate": '1/1/1900'});
+
+			tableData.push({
+				"pl_name": "Planet Radius(Xc 0.150, Xice 0.150)",
+				"pl_masse": 1,
+				"pl_rade": 1,
+				"pl_discmethod": "NA",
+				"pl_dens": 5.51,
+				"pl_imgflag": "NA",
+				"pl_eqt": 255,
+				"pl_disc": 1900,
+				"pl_pelink": "NA",
+				"pl_edelink": "NA",
+			"rowupdate": '1/1/1900'});
+
+				
+			tableData.push({
+				"pl_name": "Planet Radius(Xc 0.150, Xice 0.0)",
 				"pl_masse": 1,
 				"pl_rade": 1,
 				"pl_discmethod": "NA",
@@ -131,8 +158,19 @@
 				"pl_edelink": "NA",
 			"rowupdate": '1/1/1900'});
 				
+			tableData.push({
+				"pl_name": "Planet Radius(Xc 0.150, Xice 0.3)",
+				"pl_masse": 1,
+				"pl_rade": 1,
+				"pl_discmethod": "NA",
+				"pl_dens": 5.51,
+				"pl_imgflag": "NA",
+				"pl_eqt": 255,
+				"pl_disc": 1900,
+				"pl_pelink": "NA",
+				"pl_edelink": "NA",
+			"rowupdate": '1/1/1900'});
 				
-			
 
 		
 	
