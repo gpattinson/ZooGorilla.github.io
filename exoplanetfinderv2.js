@@ -72,6 +72,7 @@
 					"pl_discmethod":resp2[i].pl_discmethod,
 					"pl_dens":resp2[i].pl_dens,
 					"pl_imgflag":resp2[i].pl_imgflag,
+					"pl_eqt":resp2[i].pl_eqt,
 					"pl_disc":resp2[i].pl_disc,
 					"pl_pelink":resp2[i].pl_pelink,
 					"pl_edelink":resp2[i].pl_edelink,
